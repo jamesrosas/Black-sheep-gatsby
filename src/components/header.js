@@ -1,42 +1,33 @@
-import * as React from "react"
-import PropTypes from "prop-types"
+import React from "react"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import "./styles/Header.css"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const Header = () => (
+    <header className="header-container">
+      <div className="icon-container">
+        <div className="image-content">
+          <Link to="/">
+            <StaticImage 
+              src="../images/sheep.png"
+              width={50}
+              quality={95}
+              formats={["AUTO", "WEBP", "AVIF"]}
+              alt="black sheep icon"
+            />
+            <p className="icon-title">Black Sheep</p>
+          </Link>
+        </div>
+      </div>
+      <div className="nav-container">
+        <nav>
+          <ul>
+            <li><Link to="/">Inicio</Link></li>
+            <li>Checkout</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
