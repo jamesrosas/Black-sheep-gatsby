@@ -31,7 +31,8 @@ exports.createPages = async ({graphql, actions}) => {
     result.data.allStripePrice.edges.forEach(({node}) => {
         createPage({
             path: `${node.id}`,
-            component: productTemplate
+            component: productTemplate,
+            context: node
         })
     });
 }

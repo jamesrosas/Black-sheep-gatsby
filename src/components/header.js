@@ -1,9 +1,15 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import "./styles/Header.css"
+import { CartContext } from "../Context"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
-const Header = () => (
+const Header = () => {
+  const {cart} = useContext(CartContext)
+
+  return(
     <header className="header-container">
       <div className="icon-container">
         <div className="image-content">
@@ -23,11 +29,12 @@ const Header = () => (
         <nav>
           <ul>
             <li><Link to="/">Inicio</Link></li>
-            <li>Checkout</li>
+            <li><FontAwesomeIcon icon={faShoppingCart} size="xs" /> {cart.length}</li>
           </ul>
         </nav>
       </div>
     </header>
-)
+  )
+}
 
 export default Header

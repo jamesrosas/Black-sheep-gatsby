@@ -8,9 +8,12 @@
 
 const React = require('react');
 const Layout = require('./src/components/Layout').default
+const {CartProvider} = require('./src/Context')
 
 export const wrapRootElement = ({element}) => (
+    <CartProvider>
         <Layout>
             {element}
-        </Layout>
-    )
+        </Layout>  
+    </CartProvider>
+)

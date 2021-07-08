@@ -1,12 +1,13 @@
 import React from 'react'
+import CardDetails from '../components/CardDetails'
 
-const ProductDetails = () => {
+const ProductDetails = ({pageContext}) => {
     return (
-        <div>
-            <p> Este es el producto</p>
-            <p>con su respectiva descripcion</p>
-            <p>nota: ver la url que debe contener el id</p>
-        </div>
+        <>
+            <div>
+                <CardDetails {...pageContext} />
+            </div>
+        </>
     )
 }
 
