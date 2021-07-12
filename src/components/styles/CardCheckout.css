@@ -1,0 +1,14 @@
+.card-check_container{
+    max-width: 500px;
+    border: rgb(0, 0, 0) 2px solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card-check_container span {
+    font-size: 21px;
+    font-weight: 600;
+}
+

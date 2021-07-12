@@ -29,7 +29,9 @@ const Header = () => {
         <nav>
           <ul>
             <li><Link to="/">Inicio</Link></li>
-            <li><FontAwesomeIcon icon={faShoppingCart} size="xs" /> {cart.length}</li>
+            <li><Link to="/cart">
+              <FontAwesomeIcon icon={faShoppingCart} size="xs" /> {cart.length}
+            </Link></li>  
           </ul>
         </nav>
       </div>

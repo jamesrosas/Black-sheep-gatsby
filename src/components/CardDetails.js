@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import priceFormat from '../utils/priceFormat'
 import "./styles/CardDetails.css"
 import styled from 'styled-components'
 import Seo from './seo'
 import Stars from './Stars'
+import { CartContext } from '../Context'
 
 const SelectSize = styled.div`
   & {
@@ -21,16 +22,38 @@ const SelectSize = styled.div`
     border: 1px rgb(201, 198, 198) solid;
     background-color: white;
   }
-  button:nth-child(${props => props.selected}) {
+  button:hover{
+    background-color: cyan;
+  }
+  button:active{
     background-color: rgb(219, 219, 219);
+  }
+  button:nth-child(${props => props.selected}) {
+    background-color: yellow;
+  }
+  .color-size_btn{
+    background-color: cyan;
   }
 `
 
-const CardDetails = ({unit_amount, product:{name, metadata}}) => {
+const CardDetails = ({id, unit_amount, product:{name, metadata}}) => {
     const [cantidad, setCantidad] = useState(1)
     const totalPrice = priceFormat(unit_amount * cantidad)
 
-    const [size, setSize] = useState(2)
+    const [size, setSize] = useState("s")
+    const {addToCart, cart} = useContext(CartContext)
+
+    const handleClick = () =>{
+     
+      addToCart({ unit_amount, id, name, metadata, size, quantity: cantidad })
+  
+    }
+
+    const handleButton = (e) => {
+      e.target.classList.toggle('color-size_btn')
+      setSize(e.target.value)
+    }
+
     return (
       <>
         <Seo title={name} description={metadata.description}/>
@@ -46,15 +69,15 @@ const CardDetails = ({unit_amount, product:{name, metadata}}) => {
             </div>
             {metadata.wear && (
              <SelectSize selected={size}>
-                <button onClick={() => setSize(1)}>XS</button>
-                <button onClick={() => setSize(2)}>S</button>
-                <button onClick={() => setSize(3)}>M</button>
-                <button onClick={() => setSize(4)}>L</button>
+                <button className="size-btn" onClick={handleButton} value="xs" size="1">XS</button>
+                <button className="size-btn"  onClick={handleButton} value="s" size="2">S</button>
+                <button className="size-btn" onClick={handleButton} value="m" size="3">M</button>
+                <button className="size-btn" onClick={handleButton} value="l" size="4">L</button>
              </SelectSize>
         
         )}
             <span>USD {totalPrice}</span>
-            <button className="add-cart">Agregar al Carrito</button>
+            <button className="add-cart" onClick={handleClick}>Agregar al Carrito</button>
         </div>
       </>
     )
