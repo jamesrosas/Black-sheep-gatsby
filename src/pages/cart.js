@@ -11,6 +11,7 @@ const Cart = () => {
 
     const {cart, removeToCart} = useContext(CartContext)
     const [total, setTotal] = useState(0)
+    const [stripe, setStripe] = useState()
 
     const getTotal = () => {
         setTotal(
@@ -19,6 +20,9 @@ const Cart = () => {
     }
 
     useEffect(()=>{
+        setStripe(
+            window.Stripe(process.env.STRIPE_PK)
+        )
         getTotal()
     }, [])
 
@@ -26,8 +30,23 @@ const Cart = () => {
         removeToCart(product)
       }
 
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+
+        const {error} = await stripe.redirectToCheckout({
+            lineItems: cart.map(({id, quantity}) => ({ price: id, quantity})),
+            mode: "payment",
+            successUrl: process.env.SUCCESS_REDIRECT,
+            cancelUrl: process.env.CANCEL_REDIRECT
+        })
+        if(error){
+            throw error
+        }
+    }
+
 
     console.log(cart)
+
     return(
         <div>
             <h2>Carrito</h2>
@@ -83,7 +102,7 @@ const Cart = () => {
                     <Link to="/">
                         <button>volver</button>
                     </Link>
-                    <button id="buy" disabled={cart.length === 0}>Comprar</button>               
+                    <button id="buy" onClick={handleSubmit} disabled={cart.length === 0}>Comprar</button>               
                 </div>
             </div>
         </div>

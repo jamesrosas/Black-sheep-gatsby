@@ -1,4 +1,4 @@
-import { navigate } from '@reach/router'
+// import { navigate } from '@reach/router'
 import React from 'react'
 
 const Gracias = () => {

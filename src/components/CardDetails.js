@@ -45,7 +45,7 @@ const CardDetails = ({id, unit_amount, product:{name, metadata}}) => {
 
     const handleClick = () =>{
      
-      addToCart({ unit_amount, id, name, metadata, size, quantity: cantidad })
+      addToCart({ id, unit_amount, name, metadata, size, quantity: cantidad })
   
     }
 
