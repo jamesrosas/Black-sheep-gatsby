@@ -7,7 +7,7 @@
     background-position: center;
     width: 80%;
     height: 350px;
-    margin: 5rem auto 0 auto;
+    margin: 0 auto;
     opacity: 0.8;
 }
 
@@ -24,6 +24,12 @@
     top: 1rem;
     backdrop-filter: opacity(0.2);
 }
+
+.title-category{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    margin-top: 4rem;
+}
 .for-they_container{
     width: 100%;
     height: fit-content;
@@ -31,7 +37,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    border: 1px red solid;
+    /* border: 1px red solid; */
     margin-top: 3rem;
 }
 .her-him_flayer{
@@ -39,6 +45,9 @@
     position: relative;
     box-shadow: 4px 4px 4px rgb(161, 161, 161);
     z-index: 5;
+}
+.her-him_flayer a{
+    text-decoration: none;
 }
 .her-him_flayer h2{
     position: absolute;
@@ -60,16 +69,13 @@
     border: grey solid 1px;
 }
 
-.products-container{
-    width: 100%;
-    height: fit-content;
-    border: 1px solid red;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.slogan{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
     margin-top: 6rem;
 }
+
+
 
 @media (max-width: 700px) {
     .welcome-title{

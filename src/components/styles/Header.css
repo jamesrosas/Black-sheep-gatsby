@@ -39,6 +39,22 @@
     border-radius: 5px;
 }
 
+.nav-container nav ul li a{
+    position: relative;
+    /* border: red 1px solid; */
+}
+
+.nav-container nav ul li a span{
+    position: absolute;
+    font-size: 12px;
+    top: -0.5rem;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    padding: 0 3px;
+    transition: 350ms;
+}
+
 .icon-title{
     text-decoration: none;
     color: rgb(0, 0, 0);

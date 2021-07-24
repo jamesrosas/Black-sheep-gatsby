@@ -1,0 +1,46 @@
+.products-container{
+    width: 100%;
+    height: fit-content;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+.men-hero{
+    width: 80%;
+    height: 350px;
+    background-image: url('../../images/men-fashion.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+.woman-hero{
+    width: 80%;
+    height: 350px;
+    background-image: url('../../images/woman-fashion.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+.woman-hero h2,
+.men-hero h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 100px;
+    position: absolute;
+    bottom: 1rem;
+    left: -0.5rem;
+    color: #ffffff;
+    z-index: 3;
+}
+

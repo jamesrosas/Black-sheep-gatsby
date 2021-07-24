@@ -27,10 +27,11 @@ const Header = () => {
       </div>
       <div className="nav-container">
         <nav>
-          <ul>
+          <ul> 
             <li><Link to="/">Inicio</Link></li>
             <li><Link to="/cart">
-              <FontAwesomeIcon icon={faShoppingCart} size="xs" /> {cart.length}
+              <FontAwesomeIcon icon={faShoppingCart} size="xs" />
+              {cart.length > 0 ? <span>{cart.length}</span> : null }
             </Link></li>  
           </ul>
         </nav>

@@ -53,8 +53,11 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(255, 255, 255);
+    transition: 350ms;
 }
-
+.card-container:hover .img-card_container{
+    transform: scale(1.1);
+}
 .img-card{
     width: 95%;
 }

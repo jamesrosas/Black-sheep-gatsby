@@ -1,11 +1,15 @@
 import React from 'react'
+import {Link} from 'gatsby'
+
 
 const Cancelado = () => {
 
     return(
         <div>
             <p>Tu compra ha sido cancelada</p>
-            <button>ir al inicio</button>
+            <Link to="/">
+                <button>ir al inicio</button>
+            </Link>
         </div>
     )
 }

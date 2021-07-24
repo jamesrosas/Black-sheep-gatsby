@@ -58,26 +58,32 @@ const CardDetails = ({id, unit_amount, product:{name, metadata}}) => {
       <>
         <Seo title={name} description={metadata.description}/>
         <div className="card-details_container">
-            <img width={500} src={metadata.img} alt={name}/>
-            <h2>{name}</h2>
-            <Stars/>
-            <p>{metadata.description}</p>
-            <div className="cantidad-container">
-                <button onClick={() => cantidad > 1 ? setCantidad(cantidad - 1) : null}>-</button>
-                <input type="text" disabled value={cantidad}/>
-                <button onClick={() => cantidad < 10 ? setCantidad(cantidad + 1) : null}>+</button>
+            <div className="img-container">
+              <img width={350} src={metadata.img} alt={name}/>
             </div>
-            {metadata.wear && (
-             <SelectSize selected={size}>
-                <button className="size-btn" onClick={handleButton} value="xs" size="1">XS</button>
-                <button className="size-btn"  onClick={handleButton} value="s" size="2">S</button>
-                <button className="size-btn" onClick={handleButton} value="m" size="3">M</button>
-                <button className="size-btn" onClick={handleButton} value="l" size="4">L</button>
-             </SelectSize>
-        
-        )}
-            <span>USD {totalPrice}</span>
-            <button className="add-cart" onClick={handleClick}>Agregar al Carrito</button>
+            <div className="info-container"> 
+              <h2>{name}</h2>
+              <Stars/>
+              <p>{metadata.description}</p>
+              <div className="cantidad-container">
+                  <button onClick={() => cantidad > 1 ? setCantidad(cantidad - 1) : null}>-</button>
+                  <input type="text" disabled value={cantidad}/>
+                  <button onClick={() => cantidad < 10 ? setCantidad(cantidad + 1) : null}>+</button>
+              </div>
+              {metadata.wear && (
+              <SelectSize selected={size}>
+                  <button className="size-btn" onClick={handleButton} value="xs" size="1">XS</button>
+                  <button className="size-btn"  onClick={handleButton} value="s" size="2">S</button>
+                  <button className="size-btn" onClick={handleButton} value="m" size="3">M</button>
+                  <button className="size-btn" onClick={handleButton} value="l" size="4">L</button>
+              </SelectSize>
+              )}
+              {metadata.women === 'true' && (
+                <p>solo para mujer</p>
+              )}
+              <span>USD {totalPrice}</span>
+              <button className="add-cart" onClick={handleClick}>Agregar al Carrito</button>
+            </div>
         </div>
       </>
     )
