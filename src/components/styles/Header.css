@@ -74,8 +74,43 @@
     color: rgb(255, 255, 255);
 }
 
+.cart-overlay{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.479);
+    transition: 350ms;
+    z-index: 50;
+    position: fixed;
+    text-align: right;
+    animation: opacity 250ms ease-in-out;
+}
+@keyframes opacity {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 
-/* .header-container a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-} */
+.cart-modal{
+    width: 40%;
+    height: 100%;
+    background-color: rgb(53, 112, 199);
+    padding: 1.5rem;
+    color: black;
+    position: absolute;
+    transition: 400ms;
+    animation: show 500ms ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes show {
+    from{
+        transform: translateX(200%)
+    }
+    to{
+        transform:translateX(145%)     
+    }
+}
+
+
