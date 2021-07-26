@@ -36,6 +36,25 @@ const Header = () => {
           </ul>
         </nav>
       </div>
+      {/* <div className="cart-overlay">
+        <div className="cart-container">
+          <h2>Carrito</h2>
+          {cart.length === 0 && (
+            <p>aun no agregas nada al carrito</p>
+          )}
+          {cart.map( item => {
+            return(
+              <>
+              <img src={item.metadata.img} alt={item.name} />
+              <p>{item.name}</p>
+              </>
+            )
+          }
+            
+          )
+          }
+        </div>
+      </div> */}
     </header>
   )
 }

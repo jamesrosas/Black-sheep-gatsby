@@ -19,7 +19,7 @@ query GET_PRODUCTS{
               img
               description
               wear
-              women
+              gender
             }
           }
         }
@@ -47,7 +47,8 @@ const ForHer = ({data}) => {
     const filtered = cosas.filter(item => item.id > 30)
     console.log(filtered)
 
-    const filterWoman = data.allStripePrice.edges.filter(item => item.node.product.metadata.women === 'true')
+    // const filterWoman = data.allStripePrice.edges.filter(item => item.node.product.metadata.women === 'true')
+    const filterWoman = data.allStripePrice.edges.filter(item => item.node.product.metadata.gender === 'women')
     console.log(filterWoman)
 
     return(

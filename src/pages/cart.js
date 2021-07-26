@@ -95,8 +95,12 @@ const Cart = () => {
                 )
             })}
                 <div className="total-container">
-                    <p>SubTotal:</p>
-                    <p>USD {priceFormat(total)}</p>
+                    {cart.length > 0 && (
+                        <>
+                            <p>SubTotal:</p>
+                            <p>USD {priceFormat(total)}</p>                   
+                        </>        
+                    )}
                 </div>
                 <div className="buttons-container">
                     <Link to="/">

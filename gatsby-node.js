@@ -16,7 +16,7 @@ exports.createPages = async ({graphql, actions}) => {
                   img
                   description
                   wear
-                  women
+                  gender
                 }
               }
             }
