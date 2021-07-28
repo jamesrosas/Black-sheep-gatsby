@@ -5,6 +5,7 @@ import "./styles/Header.css"
 import { CartContext } from "../Context"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import CartModal from "./CartModal"
 
 const Header = () => {
   const {cart} = useContext(CartContext)
@@ -35,35 +36,24 @@ const Header = () => {
         <nav>
           <ul> 
             <li><Link to="/">Inicio</Link></li>
-            <li onClick={showModal}><Link to="/cart">
+            <li onClick={showModal}>
               <FontAwesomeIcon icon={faShoppingCart} size="xs" />
               {cart.length > 0 ? <span>{cart.length}</span> : null }
-            </Link></li>  
+            </li>  
           </ul>
         </nav>
       </div>
     </header>
     {modal 
     ?
-    <div onClick={showModal} className="cart-overlay">
+    <>
+      <div onClick={showModal} className="cart-overlay">
+      </div>
       <div className="cart-modal">
         <button onClick={showModal}>X</button>
-        <h2>Carrito</h2>
-        {cart.length === 0 && (
-          <p>aun no agregas nada al carrito</p>
-        )}
-        {cart.map( item => {
-          return(
-          <>
-            <img src={item.metadata.img} alt={item.name} width={150} />
-            <p>{item.name}</p>
-          </>
-          )
-        }      
-        )
-        }
+        <CartModal />
       </div>
-    </div>
+    </>
     :
     null
     }

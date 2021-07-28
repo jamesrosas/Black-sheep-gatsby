@@ -23,13 +23,11 @@ const SelectSize = styled.div`
     background-color: white;
   }
   button:hover{
-    background-color: cyan;
-  }
-  button:active{
-    background-color: rgb(219, 219, 219);
+    background-color: #d1d1d1;
   }
   button:nth-child(${props => props.selected}) {
-    background-color: yellow;
+    background-color: black;
+    color: white;
   }
   .color-size_btn{
     background-color: cyan;
@@ -40,11 +38,11 @@ const CardDetails = ({id, unit_amount, product:{name, metadata}}) => {
     const [cantidad, setCantidad] = useState(1)
     const totalPrice = priceFormat(unit_amount * cantidad)
 
-    const [size, setSize] = useState("s")
+    const [size, setSize] = useState(0)
     const {addToCart, cart} = useContext(CartContext)
 
     const handleClick = () =>{
-     
+      
       addToCart({ id, unit_amount, name, metadata, size, quantity: cantidad })
   
     }
@@ -52,6 +50,7 @@ const CardDetails = ({id, unit_amount, product:{name, metadata}}) => {
     const handleButton = (e) => {
       e.target.classList.toggle('color-size_btn')
       setSize(e.target.value)
+      console.log(size)
     }
 
     return (
@@ -71,18 +70,19 @@ const CardDetails = ({id, unit_amount, product:{name, metadata}}) => {
                   <button onClick={() => cantidad < 10 ? setCantidad(cantidad + 1) : null}>+</button>
               </div>
               {metadata.wear && (
-              <SelectSize selected={size}>
-                  <button className="size-btn" onClick={handleButton} value="xs" size="1">XS</button>
-                  <button className="size-btn"  onClick={handleButton} value="s" size="2">S</button>
-                  <button className="size-btn" onClick={handleButton} value="m" size="3">M</button>
-                  <button className="size-btn" onClick={handleButton} value="l" size="4">L</button>
+              <SelectSize selected={size}> 
+                  <button className="size-btn" onClick={() => setSize(1)} >XS</button>
+                  <button className="size-btn"  onClick={() => setSize(2)} >S</button>
+                  <button className="size-btn" onClick={() => setSize(3)} >M</button>
+                  <button className="size-btn" onClick={() => setSize(4)} >L</button>
               </SelectSize>
               )}
               {metadata.women === 'true' && (
                 <p>solo para mujer</p>
               )}
               <span>USD {totalPrice}</span>
-              <button className="add-cart" onClick={handleClick}>Agregar al Carrito</button>
+              <button className="add-cart" onClick={handleClick} disabled={size === 0}>Agregar al Carrito</button>
+              {size === 0 && ( <p style={{color: "red", fontSize: "10px"}}>*escoje una talla antes de agregar al carrito</p> )}
             </div>
         </div>
       </>
