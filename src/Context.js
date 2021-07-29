@@ -31,14 +31,22 @@ const addToCart = (element) => {
 const removeToCart = (element) => {
     const sameProduct =  cart.find((item) => item.id === element.id)
     const sameSize = cart.find( item => item.size === element.size)
+    const difSize= cart.find( item => item.size !== element.size)
+    const sameName = cart.find(item => item.name === element.name)
+
 
     if(sameProduct && sameSize) {
         setCart([
-            ...cart.filter((item) => item.id !== element.id && item.size !== element.size)
+            ...cart.filter((item) => item.id !== element.id )
         ])
         // setCart(cart.filter((item) =>
         // item.size === sameSize.size &&  item.id === sameProduct.id ? item.id !== element.id : null
         // ))
+    }
+    if(sameProduct && difSize && sameName){
+        setCart([
+            ...cart.filter((item) => item.size !== element.size )
+        ])
     }
 }
 
