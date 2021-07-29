@@ -48,6 +48,7 @@ const removeToCart = (element) => {
             ...cart.filter((item) => item.size !== element.size )
         ])
     }
+  
 }
 
 return (
