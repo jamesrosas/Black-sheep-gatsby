@@ -11,6 +11,9 @@ const addToCart = (element) => {
     const otherSize = cart.find( item => item.size === element.size)
     const sameRandom = cart.find(item => item.random === element.random)
 
+    const otherRandom = Math.random() * 7777
+    const newProduct = {...element, random: `${element.random}${otherRandom}`}
+
 	if(exist) {
 		setCart(cart.map((item) =>
 			item.id === exist.id ? {...item, quantity: item.quantity + element.quantity} : item
@@ -29,7 +32,7 @@ const addToCart = (element) => {
      else {
         setCart([
             ...cart,
-            element
+            newProduct
         ])
     }
 
