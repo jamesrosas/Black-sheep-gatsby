@@ -19,7 +19,13 @@ const addToCart = (element) => {
         setCart(cart.map((item) =>
 			item.size === otherSize.size &&  item.id === exist.id ? {...item, quantity: item.quantity + element.quantity} : item
 		))
-    }else {
+    }
+    // if(exist) {
+	// 	setCart(cart.map((item) =>
+	// 		item.id === exist.id ? {...item, random: item.random + 3} : item
+	// 	))
+	// }
+     else {
         setCart([
             ...cart,
             element
@@ -33,6 +39,7 @@ const removeToCart = (element) => {
     const sameSize = cart.find( item => item.size === element.size)
     const difSize= cart.find( item => item.size !== element.size)
     const sameName = cart.find(item => item.name === element.name)
+    const sameRandom = cart.find(item => item.random === element.random)
 
 
     if(sameProduct && sameSize) {
@@ -48,6 +55,11 @@ const removeToCart = (element) => {
             ...cart.filter((item) => item.size !== element.size )
         ])
     }
+    // if(sameRandom && sameProduct && sameName) {
+    //     setCart([
+    //         ...cart.filter( item => item.size !== element.size)
+    //     ])
+    // }
   
 }
 
