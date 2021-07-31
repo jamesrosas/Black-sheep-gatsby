@@ -9,6 +9,7 @@ const [cart, setCart] = useState([])
 const addToCart = (element) => {
     const exist = cart.find((item) => item.id === element.id)
     const otherSize = cart.find( item => item.size === element.size)
+    const sameRandom = cart.find(item => item.random === element.random)
 
 	if(exist) {
 		setCart(cart.map((item) =>
@@ -19,7 +20,13 @@ const addToCart = (element) => {
         setCart(cart.map((item) =>
 			item.size === otherSize.size &&  item.id === exist.id ? {...item, quantity: item.quantity + element.quantity} : item
 		))
-    }else {
+    }
+    // if(exist) {
+	// 	setCart(cart.map((item) =>
+	// 		item.id === exist.id ? {...item, random: item.random + 3} : item
+	// 	))
+	// }
+     else {
         setCart([
             ...cart,
             element
@@ -33,7 +40,7 @@ const removeToCart = (element) => {
     const sameSize = cart.find( item => item.size === element.size)
     const difSize= cart.find( item => item.size !== element.size)
     const sameName = cart.find(item => item.name === element.name)
-    const sameQty = cart.find(item => item.quantity === element.quantity)
+    const sameRandom = cart.find(item => item.random === element.random)
 
 
     if(sameProduct && sameSize) {
@@ -46,14 +53,15 @@ const removeToCart = (element) => {
     }
     if(sameProduct && difSize && sameName){
         setCart([
-            ...cart.filter((item) => item.size !== element.size )
+            ...cart.filter((item) => item.random !== element.random )
         ])
     }
-    // if(sameSize && sameQty && sameProduct){
+    // if(sameRandom && sameProduct && sameName) {
     //     setCart([
-    //         ...cart.filter((item) => item.size !== element.size )
+    //         ...cart.filter( item => item.size !== element.size)
     //     ])
     // }
+  
 }
 
 return (
