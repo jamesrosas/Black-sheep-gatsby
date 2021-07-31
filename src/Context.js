@@ -52,7 +52,7 @@ const removeToCart = (element) => {
     }
     if(sameProduct && difSize && sameName){
         setCart([
-            ...cart.filter((item) => item.size !== element.size )
+            ...cart.filter((item) => item.random !== element.random )
         ])
     }
     // if(sameRandom && sameProduct && sameName) {
