@@ -41,12 +41,11 @@ const CardDetails = ({id, unit_amount, product:{name, metadata}}) => {
     const [size, setSize] = useState(0)
     const {addToCart, cart} = useContext(CartContext)
 
-    const otherRandom = Math.floor(Math.random() * (234324 + 2342))
-    const randomNum = Math.random()*(939943 - 23824) + otherRandom
+    const randomNum = Math.floor(Math.random()*(939943 - 23824) + 1)
     const [random, setRandom] = useState(randomNum)
 
     const handleClick = () =>{
-      
+    
       addToCart({ id, unit_amount, name, metadata, size, random, quantity: cantidad })
   
     }

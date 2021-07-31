@@ -9,6 +9,7 @@ const [cart, setCart] = useState([])
 const addToCart = (element) => {
     const exist = cart.find((item) => item.id === element.id)
     const otherSize = cart.find( item => item.size === element.size)
+    const sameRandom = cart.find(item => item.random === element.random)
 
 	if(exist) {
 		setCart(cart.map((item) =>
