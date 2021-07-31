@@ -33,6 +33,7 @@ const removeToCart = (element) => {
     const sameSize = cart.find( item => item.size === element.size)
     const difSize= cart.find( item => item.size !== element.size)
     const sameName = cart.find(item => item.name === element.name)
+    const sameQty = cart.find(item => item.quantity === element.quantity)
 
 
     if(sameProduct && sameSize) {
@@ -48,6 +49,11 @@ const removeToCart = (element) => {
             ...cart.filter((item) => item.size !== element.size )
         ])
     }
+    // if(sameSize && sameQty && sameProduct){
+    //     setCart([
+    //         ...cart.filter((item) => item.size !== element.size )
+    //     ])
+    // }
 }
 
 return (
