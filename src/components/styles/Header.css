@@ -96,9 +96,9 @@
 
 .cart-modal{
     width: 40%;
-    height: 100vh;
+    height: 100%;
     background-color: #ffffff;
-    padding: 1.5rem;
+    padding: 0.5rem;
     color: black;
     position: fixed;
     transition: 400ms;
@@ -111,6 +111,21 @@
     }
     to{
         transform:translateX(150%)     
+    }
+}
+
+@media (max-width: 640px) {
+    .cart-modal{
+        width: 70%;
+        animation: show 500ms forwards 1;
+    }
+    @keyframes show {
+        from{
+            transform: translateX(200%)
+        }
+        to{
+            transform:translateX(45%)     
+        }
     }
 }
 

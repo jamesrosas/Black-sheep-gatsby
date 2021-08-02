@@ -39,7 +39,7 @@ const Header = () => {
             <li onClick={showModal}>
               <FontAwesomeIcon icon={faShoppingCart} size="xs" />
               {cart.length > 0 ? <span>{cart.length}</span> : null }
-            </li>  
+            </li>   
           </ul>
         </nav>
       </div>

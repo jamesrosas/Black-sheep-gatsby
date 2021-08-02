@@ -43,7 +43,6 @@ const removeToCart = (element) => {
     const sameSize = cart.find( item => item.size === element.size)
     const difSize= cart.find( item => item.size !== element.size)
     const sameName = cart.find(item => item.name === element.name)
-    const sameRandom = cart.find(item => item.random === element.random)
 
 
     if(sameProduct && sameSize) {
