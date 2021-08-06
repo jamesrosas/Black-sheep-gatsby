@@ -40,6 +40,7 @@ export const query = graphql`
 const ForHim = ({data}) => {
 
   const filterMen = data.allStripePrice.edges.filter(({node}) => node.product.metadata.gender === 'men')
+
   
     return(
         <div>

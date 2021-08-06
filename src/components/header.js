@@ -49,8 +49,8 @@ const Header = () => {
     <>
       <div onClick={showModal} className="cart-overlay">
       </div>
-      <div className="cart-modal">
-        <button onClick={showModal}>X</button>
+      <div className="cart-modal"> 
+        <button id="close-btn" onClick={showModal}>X</button>
         <CartModal />
       </div>
     </>

@@ -28,7 +28,7 @@
 .title-category{
     font-family: 'Bebas Neue', cursive;
     font-size: 30px;
-    margin-top: 4rem;
+    margin-top: 6rem;
 }
 .for-they_container{
     width: 100%;
@@ -37,14 +37,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* border: 1px red solid; */
     margin-top: 3rem;
 }
 .her-him_flayer{
-    /* overflow: hidden; */
     position: relative;
     box-shadow: 4px 4px 4px rgb(161, 161, 161);
-    z-index: 5;
+    margin: 1rem 0 2rem 0;
+    overflow: hidden;
+
 }
 .her-him_flayer a{
     text-decoration: none;
@@ -60,13 +60,35 @@
     font-family: 'Bebas Neue', cursive;
     z-index: 6;
 }
+
+.her-him_flayer:hover .destello{
+    width: 500px;
+    height: 30px;
+    background-color: #ffffff;
+    position: absolute;
+    opacity: 0.6;
+    box-shadow: 1px 1px 40px white, 2px 2px 60px white ;
+    left: -8rem;
+    transform: rotate(-40deg);
+    top: -15rem;
+    animation: destello 450ms forwards 1;
+}
+
+@keyframes destello {
+    0% {
+        top: -12rem;
+    } 
+    100% {
+        top: 70rem;
+    }
+}
 .flayer-back_border{
     width: 350px;
     height: 525px;
     position: absolute;
     top: 1.5rem;
     left: 1.5rem;
-    border: grey solid 1px;
+    border: white solid 2px;
 }
 
 .slogan{

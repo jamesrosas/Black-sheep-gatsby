@@ -23,6 +23,15 @@ main {
   text-align: center;
 }
 
+body::-webkit-scrollbar{
+  width: 5px;
+  background-color: #ffffff;
+}
+body::-webkit-scrollbar-thumb{
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
 h1 {
   color: darkorchid;
   font-family: 'Krona One', sans-serif;

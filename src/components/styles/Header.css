@@ -99,6 +99,7 @@
     height: 100%;
     background-color: #ffffff;
     padding: 0.5rem;
+    padding-top: 3rem;
     color: black;
     position: fixed;
     transition: 400ms;
@@ -112,6 +113,17 @@
     to{
         transform:translateX(150%)     
     }
+}
+#close-btn{
+    position: absolute;
+    right: 2rem;
+    background-color: white;
+    color: black;
+    font-size: 2.5rem;
+    top: 0.5rem;
+    border: none;
+    cursor: pointer;
+   
 }
 
 @media (max-width: 640px) {

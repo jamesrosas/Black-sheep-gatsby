@@ -48,7 +48,7 @@ const CartModal = () => {
     console.log(cart)
 
     return(
-        <div>
+        <div className="cart-container">
             <h2 className="title_cart">Carrito</h2>
             <div className="all-cart_container">
             {cart.length === 0 && (
@@ -68,40 +68,31 @@ const CartModal = () => {
             )}
             {cart.map(carrito => {
                 return(
-                <>
-                    <div className="cart-container">
-                        <ul>
-                            <li key={carrito.id}>
-                                <div key={carrito.id} className="card-check_container">
-                                    <img width={80} height={80} src={carrito.metadata.img} alt={carrito.name}/>
-                                    <div className="info-product_container">
-                                        <span>{priceFormat(carrito.unit_amount * carrito.quantity)}</span>
-                                        <p className="product-name">{carrito.name}</p><br/>
-                                        <div id="size-and-qty">
-                                            <p>{carrito.size === 1 &&(
-                                                <>XS</>
-                                            )}
-                                            {carrito.size === 2 &&(
-                                                <>S</>
-                                            )}
-                                            {carrito.size === 3 &&(
-                                                <>M</>
-                                            )}{carrito.size === 4 &&(
-                                                <>L</>
-                                            )}</p>
-                                            <span>|</span>
-                                            <p>x{carrito.quantity}</p>
-                                        </div>
-                                        {/* <button onClick={() => qty > 1 ? setQty(qty - 1) : null}>-</button>
-                                        <input type="text" disabled value={carrito.quantity}/>
-                                        <button onClick={() => qty < 10 ? setQty(qty + 1) : null}>+</button> */}
-                                    </div>
-                                    <button onClick={() => handleRemove(carrito)}>X</button>
+                    <li key={carrito.id}>
+                        <div className="card-check_container">
+                            <img width={80} height={80} src={carrito.metadata.img} alt={carrito.name}/>
+                            <div className="info-product_container">
+                                <span>{priceFormat(carrito.unit_amount * carrito.quantity)}</span>
+                                <p className="product-name">{carrito.name}</p><br/>
+                                <div id="size-and-qty">
+                                    <p>{carrito.size === 1 &&(
+                                            <>XS</>
+                                        )}
+                                        {carrito.size === 2 &&(
+                                            <>S</>
+                                        )}
+                                        {carrito.size === 3 &&(
+                                            <>M</>
+                                        )}{carrito.size === 4 &&(
+                                            <>L</>
+                                        )}</p>
+                                    <span>|</span>
+                                    <p>x{carrito.quantity}</p>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
-                </>
+                            </div>
+                            <button className="remove-btn" onClick={() => handleRemove(carrito)}>X</button>
+                        </div>
+                    </li>
                 )
             })}
                 <div className="button-buy_container">

@@ -6,7 +6,7 @@
     scroll-snap-type: y proximity;
     width: 97%;
     height: 450px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     margin: 0 auto;
     /* border: 1px blue solid; */
 }
@@ -101,6 +101,21 @@
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 5px;
+    position: relative;
+}
+
+.remove-btn{
+    position: absolute;
+    right: 0.5rem;
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    top: 0.5rem;
+    border: none;
+    cursor: pointer;
+    padding: 1px 4px 1px 4px;
+    border: 2px solid black;
+    border-radius: 50%;
 }
 
 .button-buy_container{

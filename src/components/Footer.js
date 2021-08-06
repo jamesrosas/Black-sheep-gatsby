@@ -4,8 +4,8 @@ import "./styles/Footer.css"
 const Footer = () => {
     return (
         <footer className="footer-container">
-            <p>Con ❤ desde Black Sheep</p>
-            <p>Todos los derechos de este lado</p>
+            <p>We are Black Sheep</p>
+            <p>All rights reserved</p>
         </footer>
     )
 }

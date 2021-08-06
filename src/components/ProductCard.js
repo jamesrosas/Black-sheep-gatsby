@@ -12,7 +12,7 @@ const ProductCard = ({products}) => {
         {products.map(({node}) =>{
             const price = formatPrice(node.unit_amount)
             return (
-            <div className="product-card_container">
+            <div key={node.id} className="product-card_container">
                 <Link to={`/${node.id}`}>
                     <div className="card-container" key={node.id}>
                         <div className="img-card_container"> 

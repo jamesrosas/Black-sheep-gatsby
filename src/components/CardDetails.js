@@ -61,7 +61,7 @@ const CardDetails = ({id, unit_amount, product:{name, metadata}}) => {
         <Seo title={name} description={metadata.description}/>
         <div className="card-details_container">
             <div className="img-container">
-              <img width={350} src={metadata.img} alt={name}/>
+              <img width={500} src={metadata.img} alt={name}/>
             </div>
             <div className="info-container"> 
               <h2>{name}</h2>

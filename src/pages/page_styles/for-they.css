@@ -1,12 +1,12 @@
 .products-container{
-    width: 100%;
+    width: 80%;
     height: fit-content;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 6rem;
+    margin: 6rem auto 0 auto;
 }
 
 .men-hero{
@@ -42,5 +42,11 @@
     left: -0.5rem;
     color: #ffffff;
     z-index: 3;
+}
+
+@media (max-width: 650px) {
+    .products-container{
+        width: 100%;
+    }
 }
 
