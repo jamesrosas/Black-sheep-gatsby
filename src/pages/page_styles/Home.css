@@ -44,7 +44,6 @@
     box-shadow: 4px 4px 4px rgb(161, 161, 161);
     margin: 1rem 0 2rem 0;
     overflow: hidden;
-
 }
 .her-him_flayer a{
     text-decoration: none;
@@ -72,6 +71,13 @@
     transform: rotate(-40deg);
     top: -15rem;
     animation: destello 450ms forwards 1;
+}
+
+.her-him_flayer:hover a img{
+    transform: scale(1.05);
+}
+.her-him_flayer a img {
+    transition: 350ms;
 }
 
 @keyframes destello {
@@ -114,5 +120,8 @@
         line-height: 80px;
         top: 5rem;
         left: -20px;
+    }
+    .her-him_flayer a img{
+        width: 320px;
     }
 }

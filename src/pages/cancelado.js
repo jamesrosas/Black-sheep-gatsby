@@ -1,15 +1,23 @@
 import React from 'react'
 import {Link} from 'gatsby'
+import "./page_styles/cancelado.css"
+import cancelImage from '../images/delivery-canceled.jpg'
 
 
 const Cancelado = () => {
 
     return(
-        <div>
-            <p>Tu compra ha sido cancelada</p>
-            <Link to="/">
-                <button>ir al inicio</button>
-            </Link>
+        <div className="cancel-page">
+            <div className="copy-cancel_page">
+                <h2>Tu pedido ha sido cancelado</h2>
+                <p>No pasa nada, recuerda que siempre puedes volver</p>
+                <Link to="/">
+                    ir al inicio
+                </Link>
+            </div>
+            <div className="image-container_cancel">
+                <span></span>
+            </div>
         </div>
     )
 }

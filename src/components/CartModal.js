@@ -53,7 +53,7 @@ const CartModal = () => {
             <div className="all-cart_container">
             {cart.length === 0 && (
                 <div className="empty-cart_container">
-                    <p>Aun no agregas nada al carrito 😕</p>
+                    <p>Aún no agregas nada al carrito 😕</p>
                     <div className="empty-cart_image">
                         <StaticImage
                             src="https://i.postimg.cc/vBPDQj2M/carrito-vacio.jpg"
