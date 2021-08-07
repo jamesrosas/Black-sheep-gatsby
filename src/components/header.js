@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faBars } from '@fortawesome/free-solid-svg-icons'
 import CartModal from "./CartModal"
 import ToggleMenu from "./toggleMenu"
+import Modal from "./modal"
 
 const Header = () => {
   const {cart} = useContext(CartContext)
@@ -53,7 +54,7 @@ const Header = () => {
               </div>
             </li>
             <li onClick={showModal}>
-              <FontAwesomeIcon icon={faShoppingCart} size="xs" />
+              <FontAwesomeIcon icon={faShoppingCart} size="lg" />
               {cart.length > 0 ? <span>{cart.length}</span> : null }
             </li>
             <li id="toggle-menu" onClick={showMenu}>
@@ -65,23 +66,17 @@ const Header = () => {
     </header>
     {modal && (
     <>
-      <div onClick={showModal} className="cart-overlay">
-      </div>
-      <div className="cart-modal"> 
-        <button className="close-btn" onClick={showModal}>X</button>
+      <Modal onClick={showModal}>
         <CartModal />
-      </div>
+      </Modal>
     </>
     )
     }
     {toggleMenu && (
     <>
-    <div onClick={showModal} className="menu-overlay">
-    </div>
-    <div className="menu-modal"> 
-      <button className="close-btn" onClick={showModal}>X</button>
-      <ToggleMenu />
-    </div>
+      <Modal onClick={showMenu}>
+        <ToggleMenu />
+      </Modal>
     </>
     )
     }

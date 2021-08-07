@@ -10,8 +10,8 @@ const ToggleMenu = () => {
                     <details>
                         <summary>Categorys</summary>
                         <ul>
-                            <li>For her</li>
-                            <li>For him</li>
+                            <li className="li-details">For her</li>
+                            <li className="li-details">For him</li>
                         </ul>
                     </details>
                 </li>
