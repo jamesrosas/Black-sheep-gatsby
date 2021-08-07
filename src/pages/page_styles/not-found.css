@@ -1,36 +1,37 @@
-.thanks-page{
+.not-found_container{
+    width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-self: center;
     width: 100%;
     height: 550px;
-    position: relative;
     gap: 2rem;
 }
 
-.thanks-page h2 {
+.not-found_container h1 {
     font-family: 'Bebas Neue', cursive;
-    font-size: 45px;
-    color: white;
-    width: fit-content;
-    margin: 0 auto;
-    padding:6px 10px;
-    background-color:#000000;
-}
-.thanks-page p {
-    font-family: 'Cabin', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 85px;
+    z-index: 2;
     color: white;
     width: fit-content;
     margin: 0 auto;
     padding:10px;
     background-color:#000000;
 }
-
-
-.thanks-page a {
+.not-found_container p {
+    font-family: 'Cabin', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    z-index: 2;
+    color: white;
+    width: fit-content;
+    margin: 0 auto;
+    padding:10px;
+    background-color:#000000;
+}
+.not-found_container a{
     padding: 1rem 2rem;
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
@@ -41,36 +42,23 @@
     margin: 0 auto;
     border: 2px solid black;
     text-decoration: none;
+    z-index: 2;
 }
 
-.copy-thanks_page{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    z-index: 3;
-    margin-top: 2rem;
-}
-
-.image-container_thanks{
+.not-found_image_container{
     margin-top: -24rem;
     width: 700px;
     height: 900px;
     overflow: hidden;
-    background-image: url('../../images/compra-feliz.jpg');
+    background-image: url('../../images/not-found.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(0.8);
 }
 
-#cancel-image{
-    position: absolute;
-    right: 0;
-}
-
 @media (max-width: 600px) {
-    .image-container_thanks{
+    .not-found_image_container{
         right: 0;
         height: 600px;
         width: 98%;

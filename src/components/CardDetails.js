@@ -80,11 +80,8 @@ const CardDetails = ({id, unit_amount, product:{name, metadata}}) => {
                   <button className="size-btn" onClick={() => setSize(4)} >L</button>
               </SelectSize>
               )}
-              {metadata.women === 'true' && (
-                <p>solo para mujer</p>
-              )}
               <span>USD {totalPrice}</span>
-              <button className="add-cart" onClick={handleClick} disabled={size === 0}>Agregar al Carrito</button>
+              <button className="add-cart" onClick={handleClick} disabled={size === 0}>Add to cart</button>
               {size === 0 && ( <p style={{color: "red", fontSize: "10px"}}>*escoje una talla antes de agregar al carrito</p> )}
             </div>
         </div>

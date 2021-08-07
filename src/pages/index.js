@@ -13,7 +13,7 @@ const IndexPage = () => (
     <Seo title={`Los diseños mas inovadores`} description="Bienvenid@ a la tienda con los diseños mas inovadores. Entra ya y descubre todo lo que tenemos para ti"/>
     <section className="welcome-hero">
       <span className="welcome-hero_image"></span>
-      <h2 className="welcome-title">Welcome to Black Sheep</h2>
+      <h1 className="welcome-title">Welcome to Black Sheep</h1>
     </section>
     <h2 className="title-category">New Arrivals</h2>
     <section className="for-they_container">

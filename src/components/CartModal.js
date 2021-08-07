@@ -49,11 +49,11 @@ const CartModal = () => {
 
     return(
         <div className="cart-container">
-            <h2 className="title_cart">Carrito</h2>
+            <h2 className="title_cart">Cart</h2>
             <div className="all-cart_container">
             {cart.length === 0 && (
                 <div className="empty-cart_container">
-                    <p>Aún no agregas nada al carrito 😕</p>
+                    <p>You still don't add anything to the cart😕</p>
                     <div className="empty-cart_image">
                         <StaticImage
                             src="https://i.postimg.cc/vBPDQj2M/carrito-vacio.jpg"
@@ -102,7 +102,7 @@ const CartModal = () => {
                             <p>SubTotal:</p>
                             <p>USD {priceFormat(total)}</p>                   
                         </div>
-                        <button id="buy" onClick={handleSubmit} >Ir al pago</button>
+                        <button id="buy" onClick={handleSubmit} >Go to pay</button>
                         </>              
                     )}
                 </div>

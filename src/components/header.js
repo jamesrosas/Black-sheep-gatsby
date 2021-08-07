@@ -11,10 +11,16 @@ const Header = () => {
   const {cart} = useContext(CartContext)
 
   const [modal, setModal] = useState(false)
-  
+  const [category, setCategory] = useState(false)
+
   const showModal = () => {
     setModal(!modal)
   }
+
+  const handleMenu = () => {
+    setCategory(!category)
+  }
+
   return(
     <>
     <header className="header-container">
@@ -35,7 +41,16 @@ const Header = () => {
       <div className="nav-container">
         <nav>
           <ul> 
-            <li><Link to="/">Inicio</Link></li>
+            <li><Link to="/">Home</Link></li>
+            <li id="categorys" onClick={handleMenu}>
+              Categorys
+              <div className="modal-category">
+                <ul>
+                  <li><Link to="/ropa-mujer">For her</Link></li>
+                  <li><Link to="/ropa-hombre">For him</Link></li>
+                </ul>
+              </div>
+            </li>
             <li onClick={showModal}>
               <FontAwesomeIcon icon={faShoppingCart} size="xs" />
               {cart.length > 0 ? <span>{cart.length}</span> : null }

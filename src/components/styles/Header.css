@@ -63,8 +63,8 @@
 
 .header-container li {
     list-style: none;
+    font-family: 'Bebas Neue', cursive;
     font-size: 2rem;
-    font-weight: 600;
     display: inline;
     margin: 0 1rem;
 }
@@ -73,6 +73,44 @@
 .header-container li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
+}
+
+#categorys{
+    position: relative;
+}
+
+.modal-category{
+    display: none;
+}
+
+#categorys:hover .modal-category{
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    display: flex;
+    background-color: transparent;
+    /* border: 1px solid red; */
+    padding-top: 2.8rem;
+}
+
+.modal-category ul {
+    padding-top: 2rem;
+    width: 100px;
+    height: fit-content;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 1rem;
+}
+.modal-category ul li{
+    list-style: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
 }
 
 .cart-overlay{
