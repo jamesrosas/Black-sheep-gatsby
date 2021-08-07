@@ -1,0 +1,11 @@
+.toggle-menu_container{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}

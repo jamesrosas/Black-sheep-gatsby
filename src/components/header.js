@@ -4,21 +4,22 @@ import { StaticImage } from "gatsby-plugin-image"
 import "./styles/Header.css"
 import { CartContext } from "../Context"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart, faBars } from '@fortawesome/free-solid-svg-icons'
 import CartModal from "./CartModal"
+import ToggleMenu from "./toggleMenu"
 
 const Header = () => {
   const {cart} = useContext(CartContext)
 
   const [modal, setModal] = useState(false)
-  const [category, setCategory] = useState(false)
+  const [toggleMenu, setToggleMenu] = useState(false)
 
   const showModal = () => {
     setModal(!modal)
   }
 
-  const handleMenu = () => {
-    setCategory(!category)
+  const showMenu = () => {
+    setToggleMenu(!toggleMenu)
   }
 
   return(
@@ -41,8 +42,8 @@ const Header = () => {
       <div className="nav-container">
         <nav>
           <ul> 
-            <li><Link to="/">Home</Link></li>
-            <li id="categorys" onClick={handleMenu}>
+            <li id="home"><Link to="/">Home</Link></li>
+            <li id="categorys">
               Categorys
               <div className="modal-category">
                 <ul>
@@ -54,25 +55,36 @@ const Header = () => {
             <li onClick={showModal}>
               <FontAwesomeIcon icon={faShoppingCart} size="xs" />
               {cart.length > 0 ? <span>{cart.length}</span> : null }
-            </li>   
+            </li>
+            <li id="toggle-menu" onClick={showMenu}>
+              <FontAwesomeIcon icon={faBars} size="lg" />
+            </li>  
           </ul>
         </nav>
       </div>
     </header>
-    {modal 
-    ?
+    {modal && (
     <>
       <div onClick={showModal} className="cart-overlay">
       </div>
       <div className="cart-modal"> 
-        <button id="close-btn" onClick={showModal}>X</button>
+        <button className="close-btn" onClick={showModal}>X</button>
         <CartModal />
       </div>
     </>
-    :
-    null
+    )
     }
-   
+    {toggleMenu && (
+    <>
+    <div onClick={showModal} className="menu-overlay">
+    </div>
+    <div className="menu-modal"> 
+      <button className="close-btn" onClick={showModal}>X</button>
+      <ToggleMenu />
+    </div>
+    </>
+    )
+    }
     </>
   )
 }

@@ -22,6 +22,10 @@
     /* margin: 0.5rem; */
 }
 
+#toggle-menu{
+    display: none;
+}
+
 .icon-container{
     grid-area: icon;
 }
@@ -123,6 +127,7 @@
     text-align: right;
     animation: opacity 250ms forwards 1;
 }
+
 @keyframes opacity {
     from{
         opacity: 0;
@@ -152,7 +157,8 @@
         transform:translateX(150%)     
     }
 }
-#close-btn{
+
+.close-btn{
     position: absolute;
     right: 2rem;
     background-color: white;
@@ -177,6 +183,17 @@
             transform:translateX(45%)     
         }
     }
+}
+
+@media (max-width: 500px) {
+    #toggle-menu{
+        display: flex;
+    }
+    #categorys, #home, #home a{
+        display: none;
+    }
+
+    
 }
 
 
