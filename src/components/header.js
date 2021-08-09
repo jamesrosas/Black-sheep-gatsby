@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import "./styles/Header.css"
-import { CartContext } from "../Context"
+import "./styles/header.css"
+import { CartContext } from "../context"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faBars } from '@fortawesome/free-solid-svg-icons'
-import CartModal from "./CartModal"
+import CartModal from "./cartModal"
 import ToggleMenu from "./toggleMenu"
 import Modal from "./modal"
 

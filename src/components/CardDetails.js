@@ -3,8 +3,8 @@ import priceFormat from '../utils/priceFormat'
 import "./styles/cardDetails.css"
 import styled from 'styled-components'
 import Seo from './seo'
-import Stars from './Stars'
-import { CartContext } from '../Context'
+import Stars from './stars'
+import { CartContext } from '../context'
 
 const SelectSize = styled.div`
   & {

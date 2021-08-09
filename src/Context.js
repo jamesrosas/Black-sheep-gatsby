@@ -1,4 +1,3 @@
-import { element } from 'prop-types'
 import React, {createContext, useState} from 'react'
 
 export const CartContext = createContext()
@@ -9,7 +8,6 @@ const [cart, setCart] = useState([])
 const addToCart = (element) => {
     const exist = cart.find((item) => item.id === element.id)
     const otherSize = cart.find( item => item.size === element.size)
-    const sameRandom = cart.find(item => item.random === element.random)
 
     const otherRandom = Math.random() * 7777
     const newProduct = {...element, random: `${element.random}${otherRandom}`}

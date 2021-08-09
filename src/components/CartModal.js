@@ -1,8 +1,8 @@
 import React, {useContext, useEffect, useState} from 'react'
-import { CartContext } from '../Context'
+import { CartContext } from '../context'
 import { StaticImage } from "gatsby-plugin-image"
 import priceFormat from '../utils/priceFormat'
-import "./styles/CartModal.css"
+import "./styles/cartModal.css"
 
 
 const CartModal = () => {

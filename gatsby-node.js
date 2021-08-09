@@ -2,7 +2,7 @@ const path = require('path')
 
 exports.createPages = async ({graphql, actions}) => {
     const {createPage} = actions
-    const productTemplate = path.resolve(`src/templates/ProductDetails.js`)
+    const productTemplate = path.resolve(`src/templates/productDetails.js`)
     const result = await graphql(`
     query GET_PRODUCT {
         allStripePrice{

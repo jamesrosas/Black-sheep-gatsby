@@ -1,8 +1,6 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import "./page_styles/cancelado.css"
-import cancelImage from '../images/delivery-canceled.jpg'
-
 
 const Cancelado = () => {
 

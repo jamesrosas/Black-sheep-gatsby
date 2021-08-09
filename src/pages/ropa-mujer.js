@@ -1,10 +1,8 @@
 import React from 'react'
-// import { graphql } from 'gatsby'
-// import ProductCard from "../components/ProductCard"
 import Seo from "../components/seo"
 import "./page_styles/for-they.css"
 import { graphql } from 'gatsby'
-import ProductCard from '../components/ProductCard'
+import ProductCard from '../components/productCard'
 
 export const query = graphql`
 query GET_PRODUCTS{
@@ -29,25 +27,6 @@ query GET_PRODUCTS{
 `
 const ForHer = ({data}) => {
 
-    const cosas = [
-      {
-        id: 48,
-        name: 'perro'
-      },
-      {
-        id: 30,
-        name: 'carro'
-      },
-      {
-        id: 15,
-        name: 'moto'
-      }
-    ]
-
-    const filtered = cosas.filter(item => item.id > 30)
-    console.log(filtered)
-
-    // const filterWoman = data.allStripePrice.edges.filter(item => item.node.product.metadata.women === 'true')
     const filterWoman = data.allStripePrice.edges.filter(item => item.node.product.metadata.gender === 'women')
     console.log(filterWoman)
 

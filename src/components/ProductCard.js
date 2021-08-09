@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import "./styles/ProductCard.css"
+import "./styles/productCard.css"
 import formatPrice from '../utils/priceFormat'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 import arrowRight from '../images/right-arrow.png'
 
 const ProductCard = ({products}) => {
@@ -23,7 +21,7 @@ const ProductCard = ({products}) => {
                         <Link to={`/${node.id}`}>
                             <div className="arrow-container">
                                 <p>Ver Detalles</p>
-                                <img src={arrowRight} width={100}/>
+                                <img src={arrowRight} width={100} alt="arrow details"/>
                             </div>
                         </Link>
                     </div>   

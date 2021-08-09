@@ -1,9 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import ProductCard from "../components/ProductCard"
+import ProductCard from "../components/productCard"
 import Seo from "../components/seo"
 import "./page_styles/for-they.css"
-import { node } from 'prop-types'
 
 
 export const query = graphql`

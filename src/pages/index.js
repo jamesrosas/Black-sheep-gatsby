@@ -1,9 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import { Button } from "./page-2"
 import Seo from "../components/seo"
-import "./page_styles/Home.css"
+import "./page_styles/home.css"
 import her from '../images/her.jpg'
 import him from '../images/him.jpg'
 
