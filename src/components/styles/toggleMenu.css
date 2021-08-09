@@ -11,10 +11,22 @@
     align-items: center;
     gap: 2.5rem;
     margin-top: 2rem;
+    border-radius: 50px 0 0 
+}
+.toggle-menu_container ul {
+    text-align: center;
+}
+
+#toggle-home a {
+    color: white;
 }
 
 .toggle-menu_container ul li{
     list-style: none;
+}
+.toggle-menu_container ul li a {
+    text-decoration: none;
+    color: #000000;
 }
 
 .li-details{
@@ -22,4 +34,14 @@
     background-color: white;
     color: black;
     font-size: 35px;
+    animation: desplegar 500ms forwards 1;
+    will-change: transform;
+}
+@keyframes desplegar {
+    0%{
+        transform: rotateX(-90deg)
+    }
+    100%{
+        transform: rotateX(0)
+    }
 }

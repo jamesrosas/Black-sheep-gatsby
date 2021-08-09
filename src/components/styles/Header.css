@@ -65,6 +65,7 @@
     transition: 350ms;
 }
 
+
 .icon-title{
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -120,6 +121,9 @@
     list-style: none;
     font-family: 'Bebas Neue', cursive;
     font-size: 18px;
+}
+.modal-category ul li a:hover, .nav-container nav ul li:hover, .nav-container nav ul li a:hover {
+    color: #fff700;
 }
 
 .cart-overlay{

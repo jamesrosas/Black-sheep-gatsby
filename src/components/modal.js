@@ -3,13 +3,6 @@ import "./styles/modal.css"
 
 
 const Modal = ({children, onClick}) => {
-
-    // const [modal, setModal] = useState(false)
-
-    // const showModal = () => {
-    //     setModal(!modal)
-    // }
-
     return (
     <>
         <div onClick={onClick} className="modal-overlay">

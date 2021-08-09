@@ -75,7 +75,7 @@ const Header = () => {
     {toggleMenu && (
     <>
       <Modal onClick={showMenu}>
-        <ToggleMenu />
+        <ToggleMenu onClick={showMenu}/>
       </Modal>
     </>
     )

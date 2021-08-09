@@ -1,7 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react'
 import { CartContext } from '../Context'
-// import CardCheckout from '../components/CardCheckout'
-import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
 import priceFormat from '../utils/priceFormat'
 import "./styles/CartModal.css"
@@ -100,7 +98,7 @@ const CartModal = () => {
                         <>
                         <div id="total-container">
                             <p>SubTotal:</p>
-                            <p>USD {priceFormat(total)}</p>                   
+                            <p>{priceFormat(total)} <small>USD</small></p>                   
                         </div>
                         <button id="buy" onClick={handleSubmit} >Go to pay</button>
                         </>              

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import priceFormat from '../utils/priceFormat'
-import "./styles/CardDetails.css"
+import "./styles/cardDetails.css"
 import styled from 'styled-components'
 import Seo from './seo'
 import Stars from './Stars'
@@ -48,12 +48,6 @@ const CardDetails = ({id, unit_amount, product:{name, metadata}}) => {
     
       addToCart({ id, unit_amount, name, metadata, size, random, quantity: cantidad })
   
-    }
-
-    const handleButton = (e) => {
-      e.target.classList.toggle('color-size_btn')
-      setSize(e.target.value)
-      console.log(size)
     }
 
     return (

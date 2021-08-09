@@ -84,7 +84,8 @@
     /* border: 1px solid red; */
 }
 #total-container p{
-    font-size: 35px;
+    font-size: 25px;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .empty-cart_image{

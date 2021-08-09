@@ -1,5 +1,5 @@
 import React from 'react'
-import CardDetails from '../components/CardDetails'
+import CardDetails from '../components/cardDetails'
 
 const ProductDetails = ({pageContext}) => {
     return (
