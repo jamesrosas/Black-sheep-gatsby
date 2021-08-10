@@ -28,6 +28,11 @@
     gap: 1rem;
     justify-content: center;  
 }
+.empty-cart_container p{
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
 
 .cart-container{
     width: 100%;
@@ -74,14 +79,13 @@
 #total-container{
     width: 100%;
     padding:  0 15px;
-    /* border: 1px solid red; */
     color: white;
     font-family: 'Cabin', sans-serif;
     font-weight: 400;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* border: 1px solid red; */
+    margin: 5px 0;
 }
 #total-container p{
     font-size: 25px;
@@ -89,8 +93,14 @@
 }
 
 .empty-cart_image{
-    width: fit-content;
+    width: 98%;
+    height: 350px;
     margin: 0 auto;
+    overflow: hidden;
+    background-image: url("https://i.postimg.cc/vBPDQj2M/carrito-vacio.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card-check_container{

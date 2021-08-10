@@ -4,6 +4,8 @@ import "./styles/cardDetails.css"
 import styled from 'styled-components'
 import Seo from './seo'
 import Stars from './stars'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { CartContext } from '../context'
 
 const SelectSize = styled.div`
@@ -17,7 +19,8 @@ const SelectSize = styled.div`
   }
   button {
     width: fit-content;
-    padding: 5px;
+    padding: 10px;
+    font-size: 15px;
     border-radius: 5px;
     border: 1px rgb(201, 198, 198) solid;
     background-color: white;
@@ -58,13 +61,13 @@ const CardDetails = ({id, unit_amount, product:{name, metadata}}) => {
               <img width={500} src={metadata.img} alt={name}/>
             </div>
             <div className="info-container"> 
-              <h2>{name}</h2>
+              <h2>{name}</h2> 
               <Stars/>
               <p>{metadata.description}</p>
               <div className="cantidad-container">
-                  <button onClick={() => cantidad > 1 ? setCantidad(cantidad - 1) : null}>-</button>
+                  <button onClick={() => cantidad > 1 ? setCantidad(cantidad - 1) : null}><FontAwesomeIcon icon={faMinus} size="xs" /></button>
                   <input type="text" disabled value={cantidad}/>
-                  <button onClick={() => cantidad < 10 ? setCantidad(cantidad + 1) : null}>+</button>
+                  <button onClick={() => cantidad < 10 ? setCantidad(cantidad + 1) : null}><FontAwesomeIcon icon={faPlus} size="xs" /></button>
               </div>
               {metadata.wear && (
               <SelectSize selected={size}> 

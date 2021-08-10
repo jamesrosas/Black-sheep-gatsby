@@ -53,14 +53,6 @@ const CartModal = () => {
                 <div className="empty-cart_container">
                     <p>You still don't add anything to the cart😕</p>
                     <div className="empty-cart_image">
-                        <StaticImage
-                            src="https://i.postimg.cc/vBPDQj2M/carrito-vacio.jpg"
-                            width={400}
-                            quality={95}
-                            formats={["AUTO", "WEBP", "AVIF"]}
-                            alt="carrito vacio"
-                            style={{ marginBottom: `1.45rem` }}
-                        />
                     </div>
                 </div>
             )}

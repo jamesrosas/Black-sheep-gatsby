@@ -21,7 +21,7 @@ const ProductCard = ({products}) => {
                         <Link to={`/${node.id}`}>
                             <div className="arrow-container">
                                 <p>Ver Detalles</p>
-                                <img src={arrowRight} width={100} alt="arrow details"/>
+                                <img id="arrow-card" src={arrowRight} width={100} alt="arrow details"/>
                             </div>
                         </Link>
                     </div>   
