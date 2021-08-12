@@ -28,7 +28,7 @@ query GET_PRODUCTS{
 const ForHer = ({data}) => {
 
     const filterWoman = data.allStripePrice.edges.filter(item => item.node.product.metadata.gender === 'women')
-    console.log(filterWoman)
+    // console.log(filterWoman)
 
     return(
         <div>

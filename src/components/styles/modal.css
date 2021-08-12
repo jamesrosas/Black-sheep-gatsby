@@ -7,6 +7,7 @@
     position: fixed;
     text-align: right;
     animation: opacity 250ms forwards 1;
+    backdrop-filter: invert(1);
 }
 
 @keyframes opacity {

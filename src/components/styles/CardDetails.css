@@ -102,9 +102,15 @@
     color: #000000;
     width: fit-content;
     margin: 0 auto;
+    transition: 350ms;
 }
 .add-cart:active {
-    filter: invert(1);
+    background-color: #000000;
+    color: #ffffff;
+    transform: scale(0.9);
+}
+.add-cart:hover {
+    background-color: #80808054;
 }
 
 .color-size_btn{

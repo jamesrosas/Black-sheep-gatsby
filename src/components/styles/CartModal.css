@@ -160,7 +160,13 @@
     font-size: 25px;
     cursor: pointer;
 }
-
+#buy:hover {
+    background: yellow;
+}
+#buy:active {
+    transform: scale(0.8);
+    background: yellow;
+}
 /* .invisible {
     opacity: 0;
 } */
