@@ -78,6 +78,9 @@ const CartModal = () => {
                                         )}</p>
                                     <span>|</span>
                                     <p>x{carrito.quantity}</p>
+                                    {carrito.quantity > 1 && (
+                                        <p id="price-each">{priceFormat(carrito.unit_amount)} each</p>
+                                    )}
                                 </div>
                             </div>
                             <button className="remove-btn" onClick={() => handleRemove(carrito)}>X</button>
