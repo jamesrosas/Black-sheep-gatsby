@@ -69,14 +69,11 @@ const Header = () => {
           <CartModal />
         </Modal>
       </>
-    {toggleMenu && (
-    <>
-      <Modal onClick={showMenu}>
-        <ToggleMenu onClick={showMenu}/>
-      </Modal>
-    </>
-    )
-    }
+      {/* <>
+        <Modal onClick={showMenu} modalClass={toggleMenu ? "modal-container modal-in" : "modal-container modal-out"}overlayClass={toggleMenu ? "modal-overlay overlay-in" : "modal-overlay overlay-out"}>
+          <ToggleMenu onClick={showMenu}/>
+        </Modal>
+      </> */}
     </>
   )
 }
