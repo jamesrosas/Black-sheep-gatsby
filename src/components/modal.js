@@ -2,12 +2,12 @@ import React from 'react'
 import "./styles/modal.css"
 
 
-const Modal = ({children, onClick, classProp, overlayClass}) => {
+const Modal = ({children, onClick, modalClass, overlayClass}) => {
     return (
     <>
         <div onClick={onClick} className={overlayClass}>
         </div>
-        <div className={classProp}> 
+        <div className={modalClass}> 
             <button className="close-btn"  onClick={onClick}>X</button>
             {children}
         </div>

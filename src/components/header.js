@@ -64,21 +64,11 @@ const Header = () => {
         </nav>
       </div>
     </header>
-    {modal
-    ? (
       <>
-        <Modal onClick={showModal} classProp="modal-container modal-in" overlayClass="modal-overlay overlay-in">
+        <Modal onClick={showModal} modalClass={modal ? "modal-container modal-in" : "modal-container modal-out"} overlayClass={modal ? "modal-overlay overlay-in" : "modal-overlay overlay-out"}>
           <CartModal />
         </Modal>
       </>
-    )
-    :
-    <>
-      <Modal onClick={showModal} classProp="modal-container modal-out" overlayClass="modal-overlay overlay-out">
-        <CartModal />
-      </Modal>
-    </>
-    }
     {toggleMenu && (
     <>
       <Modal onClick={showMenu}>
