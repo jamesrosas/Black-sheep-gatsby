@@ -294,6 +294,22 @@
     #categorys, #home, #home a{
         display: none;
     }
+    .overlay-out{
+        animation: no-opacity 1s forwards 1;
+    }
+    @keyframes no-opacity {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+            transform: translateX(0)
+        }
+        100%{
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
 
     
 }
