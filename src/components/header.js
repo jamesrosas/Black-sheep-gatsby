@@ -66,7 +66,10 @@ const Header = () => {
     </header>
       <>
         <Modal onClick={showModal} modalClass={modal ? "modal-container modal-in" : "modal-container modal-out"} overlayClass={modal ? "modal-overlay overlay-in" : "modal-overlay overlay-out"}>
-          <CartModal />
+          {modal && (
+            <CartModal classOut={modal ? "cart-container cart-in": "cart-container cart-out"}/> 
+          )
+          }
         </Modal>
       </>
       {/* <>

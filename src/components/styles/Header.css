@@ -29,8 +29,21 @@
     }
 }
 .overlay-in{
-    animation: colors 4s cubic-bezier(0.4, 0, 1, 1) infinite;
+    /* animation: colors 4s cubic-bezier(0.4, 0, 1, 1) infinite; */
     /* animation: invert 4s cubic-bezier(0.4, 0, 1, 1) infinite; */
+    animation: opacity 400ms forwards 1;
+    backdrop-filter: invert(1);
+}
+@keyframes opacity {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 @keyframes colors {
     from{
@@ -50,16 +63,20 @@
 }
 
 .overlay-out{
-    display: none;
+    animation: no-opacity 2s forwards 1;
+    /* display: none; */
 }
 @keyframes no-opacity {
-    from{
+    0% {
         opacity: 1;
-        display: flex;
     }
-    to{
+    30% {
         opacity: 0;
-        display: none;
+        transform: translateY(0)
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(100%);
     }
 }
 .modal-out {
@@ -73,6 +90,29 @@
         transform:translateX(300%)     
     }
 }
+.cart-in{
+    animation: aparecer 600ms forwards 1;
+}
+@keyframes aparecer {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;     
+    }
+}
+.cart-out{
+    animation: desvanecer 500ms forwards 1;
+}
+@keyframes desvanecer {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;     
+    }
+}
+
 
 #toggle-menu{ 
     display: none;

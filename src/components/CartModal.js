@@ -5,7 +5,7 @@ import priceFormat from '../utils/priceFormat'
 import "./styles/cartModal.css"
 
 
-const CartModal = () => {
+const CartModal = ({classOut}) => {
 
     const {cart, removeToCart} = useContext(CartContext)
     const [total, setTotal] = useState(0)
@@ -46,7 +46,7 @@ const CartModal = () => {
     console.log(cart)
 
     return(
-        <div className="cart-container">
+        <div className={classOut}>
             <h2 className="title_cart">Cart</h2>
             <div className="all-cart_container">
             {cart.length === 0 && (
