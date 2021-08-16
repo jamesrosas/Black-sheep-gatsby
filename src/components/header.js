@@ -64,22 +64,19 @@ const Header = () => {
         </nav>
       </div>
     </header>
-    {modal && (
-    <>
-      <Modal onClick={showModal}>
-        <CartModal />
-      </Modal>
-    </>
-    )
-    }
-    {toggleMenu && (
-    <>
-      <Modal onClick={showMenu}>
-        <ToggleMenu onClick={showMenu}/>
-      </Modal>
-    </>
-    )
-    }
+      <>
+        <Modal onClick={showModal} modalClass={modal ? "modal-container modal-in" : "modal-container modal-out"} overlayClass={modal ? "modal-overlay overlay-in" : "modal-overlay overlay-out"}>
+          {modal && (
+            <CartModal classOut={modal ? "cart-container cart-in": "cart-container cart-out"}/> 
+          )
+          }
+        </Modal>
+      </>
+      <>
+        <Modal onClick={showMenu} modalClass={toggleMenu ? "modal-container modal-in" : "modal-container modal-out"} overlayClass={toggleMenu ? "modal-overlay overlay-in" : "modal-overlay overlay-out"}>
+          <ToggleMenu onClick={showMenu}/>
+        </Modal>
+      </> 
     </>
   )
 }
