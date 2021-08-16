@@ -55,7 +55,7 @@
 @media (max-width: 640px) {
     .modal-container{
         width: 70%;
-        /* animation: show 500ms forwards 1; */
+        animation: show 500ms forwards 1;
     }
     @keyframes show {
         from{
@@ -63,6 +63,18 @@
         }
         to{
             transform:translateX(45%)     
+        }
+    }
+
+    .modal-out {
+        animation: hide 500ms forwards 1;
+    }
+    @keyframes hide {
+        from{
+            transform: translateX(45%)
+        }
+        to{
+            transform:translateX(200%)     
         }
     }
 }
