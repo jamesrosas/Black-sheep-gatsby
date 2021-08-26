@@ -22,7 +22,7 @@ const CartModal = ({classOut}) => {
             window.Stripe(process.env.STRIPE_PK)
         )
         getTotal()
-    }, [])
+    }, [cart.length])
 
     const handleRemove = (product) => {
         removeToCart(product)
