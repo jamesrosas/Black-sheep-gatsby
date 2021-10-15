@@ -30,6 +30,23 @@
     font-size: 30px;
     margin-top: 6rem;
 }
+
+.back-line{
+    width: 100vw;
+    height: 20px;
+    background-color: Black;
+    position: absolute;
+    top: 5rem;
+}
+.back-line + span {
+    margin-top: 4rem;
+}
+
+.back-line:nth-child(2){
+    opacity: .5;
+}
+
+
 .for-they_container{
     width: 100%;
     height: fit-content;
@@ -38,6 +55,8 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 3rem;
+    position: relative;
+    overflow-x: clip;
 }
 .her-him_flayer{
     position: relative;
@@ -78,6 +97,7 @@
 }
 .her-him_flayer a img {
     transition: 350ms;
+    width: 350px;
 }
 
 @keyframes destello {
@@ -101,6 +121,44 @@
     font-family: 'Bebas Neue', cursive;
     font-size: 30px;
     margin-top: 6rem;
+}
+
+@media (min-width: 1290px) {
+
+    .welcome-hero {
+        height: 500px;
+    }
+    .welcome-title {
+        font-size: 205px;
+        max-width: 753px;
+        line-height: 168px;
+    }
+    .title-category {
+        font-size: 39px;
+        margin-top: 10rem;
+    }
+
+    .her-him_flayer a img {
+        width: 400px;
+    }
+    .flayer-back_border {
+        width: 400px;
+        height: 625px;
+    }
+    .her-him_flayer:hover .destello{
+        width: 1100px;
+        left: -50rem;
+        top: -35rem;
+        animation: destello 450ms forwards 1;
+    }
+    @keyframes destello {
+        0% {
+            top: -12rem;
+        } 
+        100% {
+            top: 95rem;
+        }
+    }
 }
 
 

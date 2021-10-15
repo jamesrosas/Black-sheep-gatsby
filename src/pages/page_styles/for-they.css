@@ -9,6 +9,24 @@
     margin: 6rem auto 0 auto;
 }
 
+
+.back-line_hero{
+    width: 100vw;
+    height: 20px;
+    background-color: Black;
+    position: absolute;
+    top: 23rem;
+    z-index: -1;
+    left: 0;
+}
+.back-line_hero + span {
+    margin-top: 4rem;
+}
+
+.back-line_hero:nth-child(2){
+    opacity: .5;
+}
+
 .men-hero{
     width: 80%;
     height: 350px;
@@ -18,7 +36,8 @@
     background-position: top;
     position: relative;
     margin: 0 auto;
-    opacity: 0.8;
+    /* opacity: 0.8; */
+    filter: brightness(1);
 }
 
 .woman-hero{
@@ -30,7 +49,8 @@
     background-position: top;
     position: relative;
     margin: 0 auto;
-    opacity: 0.8;
+    /* opacity: 0.8; */
+    filter: brightness(1.1);
 }
 
 
@@ -44,6 +64,24 @@
     left: -0.5rem;
     color: #ffffff;
     z-index: 3;
+}
+
+@media (min-width: 1290px) {
+    .category-container {
+        width: 70%;
+        margin: 0 auto;
+        overflow-x: clip;
+    }
+    .woman-hero {
+        height: 499px;
+    }
+    .men-hero{
+        height: 499px;
+    }
+    .woman-hero h2,
+    .men-hero h2 {
+        font-size: 202px;
+    }
 }
 
 @media (max-width: 650px) {

@@ -59,12 +59,12 @@ const CartModal = ({classOut}) => {
                 return(
                     <li key={carrito.id}>
                         <div className="card-check_container">
-                            <img width={80} height={80} src={carrito.metadata.img} alt={carrito.name}/>
+                            <img src={carrito.metadata.img} alt={carrito.name}/>
                             <div className="info-product_container">
                                 <span>{priceFormat(carrito.unit_amount * carrito.quantity)}</span>
                                 <p className="product-name">{carrito.name}</p><br/>
                                 <div id="size-and-qty">
-                                    <p>{carrito.size === 1 &&(
+                                    <p className="feature">{carrito.size === 1 &&(
                                             <>XS</>
                                         )}
                                         {carrito.size === 2 &&(
@@ -76,7 +76,7 @@ const CartModal = ({classOut}) => {
                                             <>L</>
                                         )}</p>
                                     <span>|</span>
-                                    <p>x{carrito.quantity}</p>
+                                    <p className="feature">x{carrito.quantity}</p>
                                     {carrito.quantity > 1 && (
                                         <p id="price-each">{priceFormat(carrito.unit_amount)} each</p>
                                     )}
@@ -87,17 +87,17 @@ const CartModal = ({classOut}) => {
                     </li>
                 )
             })}
-                <div className="button-buy_container">
-                    {cart.length > 0 && (
-                        <>
-                        <div id="total-container">
-                            <p>SubTotal:</p>
-                            <p>{priceFormat(total)} <small>USD</small></p>                   
-                        </div>
-                        <button id="buy" onClick={handleSubmit} >Go to pay</button>
-                        </>              
-                    )}
-                </div>
+            </div>
+            <div className="button-buy_container">
+                {cart.length > 0 && (
+                    <>
+                    <div id="total-container">
+                        <p>SubTotal:</p>
+                        <p>{priceFormat(total)} <small>USD</small></p>                   
+                    </div>
+                    <button id="buy" onClick={handleSubmit} >Go to pay</button>
+                    </>              
+                )}
             </div>
         </div>
     )

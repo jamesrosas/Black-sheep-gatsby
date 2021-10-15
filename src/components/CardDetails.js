@@ -35,6 +35,12 @@ const SelectSize = styled.div`
   .color-size_btn{
     background-color: cyan;
   }
+
+  @media (min-width: 1290px){
+    button {
+      font-size: 20px;
+    }
+  }
 `
 
 const CardDetails = ({id, unit_amount, product:{name, metadata}}) => {
@@ -79,7 +85,7 @@ const CardDetails = ({id, unit_amount, product:{name, metadata}}) => {
               )}
               <span>USD {totalPrice}</span>
               <button className="add-cart" onClick={handleClick} disabled={size === 0}>Add to cart</button>
-              {size === 0 && ( <p style={{color: "red", fontSize: "10px"}}>*escoje una talla antes de agregar al carrito</p> )}
+              {size === 0 && ( <p id="red-message">*escoje una talla antes de agregar al carrito</p> )}
             </div>
         </div>
       </>

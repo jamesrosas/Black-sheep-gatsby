@@ -117,6 +117,50 @@
     background-color: red;
 }
 
+#red-message{
+    color: red;
+    font-size: 10px;
+}
+
+@media (min-width: 1290px) {
+    .card-details_container{
+        margin: 9rem auto 12rem auto;
+    } 
+    .info-container h2{
+        font-size: 40px;
+    }
+    .info-container p {
+        font-size: 24px;
+    }
+
+    .info-container span {
+        font-size: 24px;
+    }
+
+    .add-cart {
+        font-size: 24px;
+    }
+
+    .img-container img {
+        width: 600px;
+    }
+
+    .cantidad-container input {
+        width: 45px;
+        height: 45px;
+        font-size: 25px;
+    }
+    .cantidad-container button {
+        width: 43px;
+        height: 43px;
+    }
+
+    #red-message{
+        color: red;
+        font-size: 13px;
+    }
+}
+
 @media (max-width: 600px) {
     .card-details_container img {
         width: 370px;

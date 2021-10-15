@@ -31,7 +31,9 @@ const ForHer = ({data}) => {
     // console.log(filterWoman)
 
     return(
-        <div>
+        <div className="category-container">
+            <span className="back-line_hero"></span>
+            <span className="back-line_hero"></span>
             <Seo title={`Ropa para mujer`} description="Lleva un estilo unico y original , vistete de tu personalidad"/>
             <section className="woman-hero">
               <h2>FOR HER</h2>

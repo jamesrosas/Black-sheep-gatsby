@@ -42,7 +42,9 @@ const ForHim = ({data}) => {
 
   
     return(
-        <div>
+        <div className="category-container">
+            <span className="back-line_hero"></span>
+            <span className="back-line_hero"></span>
             <Seo title={`Ropa para hombre`} description="Encuentra aqui las prendas para hombre con los diseños mas frescos y originales"/>
             <section className="men-hero">
               <h2>FOR HIM</h2>
