@@ -2,8 +2,8 @@ import * as React from "react"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
 import "./page_styles/home.css"
-import her from '../images/her.jpg'
-import him from '../images/him.jpg'
+import her from '../images/for-her.jpg'
+import him from '../images/for-him.jpg'
 
 
 const IndexPage = () => (

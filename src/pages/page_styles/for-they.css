@@ -30,7 +30,7 @@
 .men-hero{
     width: 80%;
     height: 350px;
-    background-image: url('../../images/men-fashion.jpg');
+    background-image: url('../../images/fashion-men.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -43,7 +43,7 @@
 .woman-hero{
     width: 80%;
     height: 350px;
-    background-image: url('../../images/woman-fashion.jpg');
+    background-image: url('../../images/fashion-woman.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
